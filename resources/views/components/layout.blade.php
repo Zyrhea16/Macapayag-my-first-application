@@ -16,10 +16,16 @@
 
             <!-- Navigation -->
             <nav class="space-x-6">
-                <a href="/" class="px-3 py-2 rounded-md {{ request()->is('/') ? 'bg-violet-400 text-white' : 'text-violet-700 hover:bg-violet-300 hover:text-violet-900' }}">Home</a>
-                <a href="/about" class="px-3 py-2 rounded-md {{ request()->is('about') ? 'bg-violet-400 text-white' : 'text-violet-700 hover:bg-violet-300 hover:text-violet-900' }}">About</a>
-                <a href="/contact" class="px-3 py-2 rounded-md {{ request()->is('contact') ? 'bg-violet-400 text-white' : 'text-violet-700 hover:bg-violet-300 hover:text-violet-900' }}">Contact</a>
-            </nav>
+    <a href="/"
+       class="px-3 py-2 rounded-md {{ request()->is('/') ? 'bg-violet-400 text-white' : 'text-violet-700 hover:bg-violet-300 hover:text-violet-900' }}">
+       Home
+    </a>
+
+    <a href="/jobs"
+       class="px-3 py-2 rounded-md {{ request()->is('jobs*') ? 'bg-violet-400 text-white' : 'text-violet-700 hover:bg-violet-300 hover:text-violet-900' }}">
+       Jobs
+    </a>
+</nav>
         </div>
     </header>
 
