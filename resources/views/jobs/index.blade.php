@@ -11,6 +11,8 @@
                     }} pays {{ $job['salary'] }} per year.
                 </a>
 
+                <a href="{{ route('jobs.show', $job) }}">{{ $job->title }}</a>
+
             <div>
                 <a href="/jobs/{{ $job['id'] }}" class="block px-4 py-6 border border-gray-200
                 rounded-lg">
@@ -23,7 +25,10 @@
                 <div class="space-y-4"> @foreach ($jobs as $job) {{-- Your existing job card link --}} @endforeach </div>
                 <div class="mt-6"> {{ $jobs->links() }} </div>
 
-
+                     <div>
+        <a href="{{ route('jobs.show', $job) }}">{{ $job->title }}</a>
+        <p>{{ $job->salary }}</p>
+    </div>
             </li>
         @endforeach
 
