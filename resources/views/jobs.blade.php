@@ -20,13 +20,8 @@
                     per year.
                 </div>
                     </a>
-                </div>
-                <div class="px-4 py-4">
-                @foreach($job->tags as $tag)
-                <span class="bg-gray-200 text-gray-700 text-xs font-semibold mr-2 px-2.5 py-0.5
-                rounded-full">{{ $tag->name }}</span>
-                @endforeach
-            </div>
+                <div class="space-y-4"> @foreach ($jobs as $job) {{-- Your existing job card link --}} @endforeach </div>
+                <div class="mt-6"> {{ $jobs->links() }} </div>
 
 
             </li>
