@@ -9,4 +9,7 @@
             This job pays {{ $job['salary'] }} per year.
         </p>
 
+    <a href="/jobs/{{ $job->id }}/edit"
+   class="inline-block mt-4 text-blue-600">✏️ Edit Job</a>
+
 </x-layout> 

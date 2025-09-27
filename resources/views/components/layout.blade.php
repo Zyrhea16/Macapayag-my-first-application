@@ -25,6 +25,11 @@
        class="px-3 py-2 rounded-md {{ request()->is('jobs*') ? 'bg-violet-400 text-white' : 'text-violet-700 hover:bg-violet-300 hover:text-violet-900' }}">
        Jobs
     </a>
+
+    <a href="/jobs/create"
+                   class="inline-block rounded-md bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outlinefocus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                   + Create Job
+    </a>
 </nav>
         </div>
     </header>
