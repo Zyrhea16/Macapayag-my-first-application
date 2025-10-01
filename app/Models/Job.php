@@ -22,4 +22,11 @@ class Job extends Model
     {
         return $this->belongsToMany(\App\Models\Tag::class, 'job_listing_tag', 'job_listing_id', 'tag_id');
     }
+
+    protected $fillable = [
+        'title',
+        'salary',
+        'employer_id',
+        ];
+    
 } 

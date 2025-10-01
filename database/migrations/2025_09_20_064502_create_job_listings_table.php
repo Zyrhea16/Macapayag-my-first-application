@@ -13,9 +13,9 @@ return new class extends Migration
 { 
     Schema::create('job_listings', function (Blueprint $table) { 
         $table->id(); 
-        $table->foreignId('employer_id'); 
-        $table->string('title'); 
-        $table->string('salary'); 
+        $table->foreignId('employer_id')->nullable();
+        $table->string('title')->nullable();
+        $table->string('salary')->nullable();
         $table->timestamps(); 
     }); 
 }
@@ -26,5 +26,9 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('job_listings');
+
+        Schema::table('job_listings', function (Blueprint $table) {
+        $table->foreignId('employer_id')->nullable()->change();
+});
     }
 };

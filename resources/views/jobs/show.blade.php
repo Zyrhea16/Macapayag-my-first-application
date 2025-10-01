@@ -3,24 +3,8 @@
         Job 
     </x-slot:heading> 
     
-<a href="{{ route('jobs.edit', $job) }}">Edit</a>
-
-<form method="POST" action="{{ route('jobs.destroy', $job) }}">
-    @csrf
-    @method('DELETE')
-    <button type="submit">Delete</button>
-</form>
-
 <h1>{{ $job->title }}</h1>
 <p>Salary: {{ $job->salary }}</p>
-
-<a href="{{ route('jobs.edit', $job) }}">Edit</a>
-
-<form method="POST" action="{{ route('jobs.destroy', $job) }}">
-    @csrf
-    @method('DELETE')
-    <button type="submit">Delete</button>
-</form>
 
     <p class="text-sm text-gray-500">{{ $job->employer->name }}</p>
     <h2 class="font-bold text-lg">{{ $job['title'] }}</h2>

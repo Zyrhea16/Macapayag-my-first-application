@@ -31,10 +31,11 @@ class JobController extends Controller
         Job::create([
             'title' => $validated['title'],
             'salary' => $validated['salary'],
-            'employer_id' => 1 // hard-coded for now
+            'employer_id' => 1,
         ]);
 
-        return redirect()->route('jobs.index');
+         return redirect()->route('jobs.index')
+                     ->with('success', 'Job created successfully!');
     }
 
     // Show a single job
@@ -53,8 +54,8 @@ class JobController extends Controller
     public function update(Request $request, Job $job)
     {
         $validated = $request->validate([
-            'title' => ['required', 'min:3'],
-            'salary' => ['required']
+            'title' => ['nullable', 'String','min:3'],
+            'salary' => ['nullable', 'String']
         ]);
 
         $job->update($validated);
